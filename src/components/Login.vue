@@ -54,7 +54,9 @@ export default {
      })
      .then((response) => {
         const data = response.data;
-        data.expiration_date = new Date(Date.now()+ data.expires_in).toLocaleString()
+        data.expiration_date = new Date(Date.now()+ data.expires_in).toLocaleString();
+        localStorage.setItem("auth", JSON.stringify(data));
+        
 
 
 
