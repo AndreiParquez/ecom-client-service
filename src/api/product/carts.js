@@ -6,7 +6,7 @@ const { http } = api;
 
 
 export default {
-  baseUrl: 'http://localhost:8001',
+  baseUrl:import.meta.env.VITE_APP_PRODUCT_SERVICE_URL,
   url: 'api/cart',
 
   http,
