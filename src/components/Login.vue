@@ -18,14 +18,12 @@
           clearable
           rounded
           variant="outlined"
-
         ></v-text-field>
 
         <div class="d-flex justify-center mt-4">
           <v-btn
             size="large"
             rounded
-
             type="submit"
           >
             Login
@@ -56,11 +54,8 @@ export default {
         const data = response.data;
         data.expiration_date = new Date(Date.now()+ data.expires_in).toLocaleString();
         localStorage.setItem("auth", JSON.stringify(data));
-        
-
-
-
         console.log('Login successful:', data);
+        window.location.href = '/home';
       })
       .catch((error) => {
         console.error('Login failed:', error);
